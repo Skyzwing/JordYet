@@ -21,7 +21,11 @@ struct MapView: UIViewRepresentable {
      - Description - Replace the body with a make UIView(context:) method that creates and return an empty MKMapView
      */
     func makeUIView(context: Context) -> MKMapView{
-        MKMapView(frame: .zero)
+        let map = MKMapView()
+        map.showsUserLocation = true
+        map.delegate = context.coordinator
+        return map
+        
     }
     
     func updateUIView(_ view: MKMapView, context: Context){
@@ -29,11 +33,5 @@ struct MapView: UIViewRepresentable {
         //mapView.removeAnnotations(mapView.annotations)
         view.delegate = context.coordinator
         view.addAnnotations(landmarks)
-    }
-}
-
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
     }
 }

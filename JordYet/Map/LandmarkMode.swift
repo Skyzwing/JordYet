@@ -26,10 +26,11 @@ class LandmarkModel: NSObject, MKAnnotation {
         return [
             LandmarkModel(title: "Bengalore",
                                subtitle:"Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state.",
-                               coordinate: .init(latitude: 12.9716, longitude: 77.5946)),
+                               coordinate: .init(latitude: 13.679720, longitude: 100.629900)),
+//            13.679720,100.629900
             LandmarkModel(title: "Mumbai",
                                subtitle:"Mumbai (formerly called Bombay) is a densely populated city on India’s west coast",
-                               coordinate: .init(latitude: 19.0760, longitude: 72.8777))
+                               coordinate: .init(latitude: 19.0760, longitude: 100.629900))
         ]
     }
 }

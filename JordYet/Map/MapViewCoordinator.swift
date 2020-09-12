@@ -1,11 +1,3 @@
-//
-//  MapViewCoordinator.swift
-//  JordYet
-//
-//  Created by Surachat Yaitammasan on 12/9/2563 BE.
-//  Copyright © 2563 Surachat Yaitammasan. All rights reserved.
-//
-
 import Foundation
 import MapKit
 
@@ -20,14 +12,22 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
           self.mapViewController = control
       }
         
-      func mapView(_ mapView: MKMapView, viewFor
-           annotation: MKAnnotation) -> MKAnnotationView?{
+      func mapView(_ mapView: MKMapView, didAdd
+           views: [MKAnnotationView]) {
          //Custom View for Annotation
-          let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
-          annotationView.canShowCallout = true
-          //Your custom image icon
-          annotationView.image = UIImage(named: "locationPin")
-          return annotationView
+        
+        if let annotationView = views.first {
+            if let annotation = annotationView.annotation {
+                if annotation is MKUserLocation {
+                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+                    mapView.setRegion(region, animated: true)
+                }
+            }
+        }
+//          let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customView")
+//          annotationView.canShowCallout = true
+//          //Your custom image icon
+//          annotationView.image = UIImage(named: "locationPin")
+//          return annotationView
        }
 }
-
