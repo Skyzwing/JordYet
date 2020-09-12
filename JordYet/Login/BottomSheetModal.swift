@@ -1,6 +1,11 @@
 import SwiftUI
 
 let kanitBold = Font.custom("Kanit-Bold", size: 16)
+let kanitMedium = Font.custom("Kanit-Medium", size: 16)
+let kanitRegular = Font.custom("Kanit-Regular", size: 16)
+let redColor = Color(red: 255.0/255.0, green: 0/255.0, blue: 0/255.0)
+let blackColor = Color(red: 16.0/255.0, green: 16.0/255.0, blue: 16.0/255.0)
+let pinkishGrey = Color(red: 173/255.0, green: 172/255.0, blue: 172/255.0)
 
 struct Tabbar: View {
     var body: some View {
@@ -8,11 +13,11 @@ struct Tabbar: View {
             Button(action: {print("Button Tapped")}) {
                 LoginButton()
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 16)
             HStack {
                 Button(action: {print("Button Tapped")}) {
                     SignUpButton()
-                }.padding(.trailing, 23)
+                }
                 
                 Button(action: {print("Button Tapped")}) {
                     BrowseButton()
@@ -21,7 +26,7 @@ struct Tabbar: View {
         }
         .padding([.leading, .trailing], 20)
         .padding(.horizontal, 5)
-        .padding(.vertical, 20)
+        .padding(.vertical, 23)
         .padding(.bottom, 6)
         .overlay(
             RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft])
@@ -68,29 +73,21 @@ struct LoginButton: View {
 struct SignUpButton: View {
     var body: some View {
         Text("SIGN UP")
-            .font(kanitBold)
-            .foregroundColor(redColor)
+            .font(kanitMedium)
+            .underline()
+            .foregroundColor(blackColor)
             .padding()
-            .frame(width: 147, height: 56)
-            .background(Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(redColor, lineWidth: 1)
-            )
+            .frame(width: 151, height:  32)
     }
 }
 
 struct BrowseButton: View {
     var body: some View {
-        Text("SIGN UP")
-            .font(kanitBold)
-            .foregroundColor(redColor)
+        Text("BROWSE")
+            .font(kanitMedium)
+            .underline()
+            .foregroundColor(blackColor)
             .padding()
-            .frame(width: 147, height: 56)
-            .background(Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(redColor, lineWidth: 1)
-            )
+            .frame(width: 152, height:  32)
     }
 }
