@@ -1,5 +1,5 @@
 //
-//  Setting.swift
+//  MyParking.swift
 //  JordYet
 //
 //  Created by Surachat Yaitammasan on 12/9/2563 BE.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct Setting: View {
+struct MyParkingView: View {
     var body: some View {
-        Text("Setting")
+        Text("My Parking!")
     }
 }
 
-struct Setting_Previews: PreviewProvider {
+struct MyParkingView_Previews: PreviewProvider {
     static var previews: some View {
-        Setting()
+        MyParkingView()
     }
 }

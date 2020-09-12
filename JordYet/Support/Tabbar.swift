@@ -8,44 +8,47 @@
 
 import SwiftUI
 
-struct Tabbar: View {
+struct TabbarView: View {
+    
+    @State var selected = 0
+    
     var body: some View {
         HStack {
             Button(action: {
-                
+                self.selected = 0
             }) {
                 VStack {
                     Image(systemName: "house")
                     Text("Home")
-                }.foregroundColor(.black)
+                }.foregroundColor(self.selected == 0 ? .red : .black)
             }
             
             Spacer(minLength: 15)
             
             Button(action: {
-                
+                self.selected = 1
             }) {
                 VStack {
                     Image(systemName: "photo")
                     Text("My Parking")
-                }.foregroundColor(.black)
+                }.foregroundColor(self.selected == 1 ? .red : .black)
             }
             
             Spacer(minLength: 15)
             
             Button(action: {
-                
+                self.selected = 2
             }) {
                 VStack {
                     Image(systemName: "gear")
                     Text("Setting")
-                }.foregroundColor(.black)
+                }.foregroundColor(self.selected == 2 ? .red : .black)
             }
         }.padding([.leading, .trailing], 20)
         .padding(.vertical, 20).background(Color.white)
         
         .overlay(
-            RoundedCorner(radius: 30.0, corners: [.topRight, .topLeft])
+            RoundedCornered(radius: 30.0, corners: [.topRight, .topLeft])
             .stroke(Color.white)
             .shadow(color: .secondary, radius: 5, x: 0, y: -4)
         )
@@ -54,11 +57,11 @@ struct Tabbar: View {
 
 struct Tabbar_Previews: PreviewProvider {
     static var previews: some View {
-        Tabbar()
+        TabbarView()
     }
 }
 
-struct RoundedCorner: Shape {
+struct RoundedCornered: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
     func path(in rect: CGRect) -> Path {
@@ -69,8 +72,8 @@ struct RoundedCorner: Shape {
     }
 }
 
-extension Tabbar {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+extension TabbarView {
+    func cornerRadiuss(_ radius: CGFloat, corners: UIRectCorner) -> some View {
        clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }
