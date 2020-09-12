@@ -15,6 +15,9 @@
 		BD0E81AC250C928E008F7441 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0E81AA250C928E008F7441 /* LaunchScreen.storyboard */; };
 		BD0E81B7250C928E008F7441 /* JordYetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81B6250C928E008F7441 /* JordYetTests.swift */; };
 		BD0E81C2250C928E008F7441 /* JordYetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81C1250C928E008F7441 /* JordYetUITests.swift */; };
+		BD0E81D0250C94F2008F7441 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81CF250C94F2008F7441 /* MapView.swift */; };
+		BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */; };
+		BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		BD0E81BD250C928E008F7441 /* JordYetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JordYetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E81C1250C928E008F7441 /* JordYetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JordYetUITests.swift; sourceTree = "<group>"; };
 		BD0E81C3250C928E008F7441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0E81CF250C94F2008F7441 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				BD0E819F250C928D008F7441 /* AppDelegate.swift */,
 				BD0E81A1250C928D008F7441 /* SceneDelegate.swift */,
 				BD0E81A3250C928D008F7441 /* ContentView.swift */,
+				BD0E81D5250C9610008F7441 /* Map */,
 				BD0E81A5250C928D008F7441 /* Assets.xcassets */,
 				BD0E81AA250C928E008F7441 /* LaunchScreen.storyboard */,
 				BD0E81AD250C928E008F7441 /* Info.plist */,
@@ -134,6 +141,16 @@
 				BD0E81C3250C928E008F7441 /* Info.plist */,
 			);
 			path = JordYetUITests;
+			sourceTree = "<group>";
+		};
+		BD0E81D5250C9610008F7441 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BD0E81CF250C94F2008F7441 /* MapView.swift */,
+				BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */,
+				BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */,
+				BD0E81D0250C94F2008F7441 /* MapView.swift in Sources */,
+				BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */,
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
+				BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
