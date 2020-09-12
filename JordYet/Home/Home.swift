@@ -15,8 +15,9 @@ struct HomeView: View {
     var colors = ["Red", "Green", "Blue", "Tartan"]
     @State private var selectedColor = 0
     @State var address = ""
-    @State var checkIn = ""
-    @State var checkOur = ""
+    @State var checkIn = "Check-In"
+    @State var checkOut = "Check-Out"
+    @State var selectedTime = false
     
     
     var body: some View {
@@ -31,19 +32,37 @@ struct HomeView: View {
                         .font(.custom("Kanit-Regular", size: 16))
                         .shadow(color: self.blur, radius: 24, x: 0, y: 4)
                         .padding(.bottom, 24)
-                    HStack {
-                        TextField("Check-In", text: self.$address).padding()
-                        .background(Color.white)
-                        .cornerRadius(10.0)
-                        .font(.custom("Kanit-Regular", size: 16))
-                        .shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.trailing, 12)
-                        
-                        TextField("Check-Out", text: self.$address).padding()
-                        .background(Color.white)
-                        .cornerRadius(10.0)
-                        .font(.custom("Kanit-Regular", size: 16))
-                        .shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
-                    }.padding(.bottom, 24)
+                    VStack {
+                        HStack {
+                            
+                            Button(action: {
+                                self.selectedTime.toggle()
+                            }) {
+                                Spacer()
+                                Text("\(self.checkIn)").padding().foregroundColor(.gray).cornerRadius(10).font(.custom("Kanit-Bold", size: 16))
+                                Spacer()
+                            }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.trailing, 12)
+                            
+                            Button(action: {
+                                print("A")
+                            }) {
+                                Spacer()
+                                Text("\(self.checkOut)").padding().foregroundColor(.gray).cornerRadius(10).font(.custom("Kanit-Bold", size: 16))
+                                Spacer()
+                            }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
+    //                        TextField("Check-In", text: self.$address).padding()
+    //                        .background(Color.white)
+    //                        .cornerRadius(10.0)
+    //                        .font(.custom("Kanit-Regular", size: 16))
+    //                        .shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.trailing, 12)
+    //
+    //                        TextField("Check-Out", text: self.$address).padding()
+    //                        .background(Color.white)
+    //                        .cornerRadius(10.0)
+    //                        .font(.custom("Kanit-Regular", size: 16))
+    //                        .shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
+                        }.padding(.bottom, 24)
+                    }
                     Group {
                         Button(action: {
                             print("A")

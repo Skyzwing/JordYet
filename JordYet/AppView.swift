@@ -19,19 +19,17 @@ struct AppView: View {
                 Group {
                     VStack {
                         if self.selected == 0 {
-                            Text("S")
-//                            HomeView()
+                            HomeView()
                         } else if self.selected == 1 {
-                            Text("SSS")
-//                            MyParkingView()
+                            MyParkingView()
                         } else {
-                            Text("SSSSSS")
-//                            SettingView()
+                            SettingView()
                         }
                     }
                 }
-            }.background(Image("bgWhite").edgesIgnoringSafeArea(.all))
-            Tabbar()
+            }
+            
+            TabbarView(selected: self.$selected).frame(height: 0)
         }
     }
 }

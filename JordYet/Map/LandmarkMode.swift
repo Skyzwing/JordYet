@@ -9,28 +9,37 @@
 import Foundation
 import MapKit
 
-class LandmarkModel: NSObject, MKAnnotation {
+class LandmarkAnnotion: NSObject, MKAnnotation {
+    
     let title: String?
-    let subtitle: String?
     let coordinate: CLLocationCoordinate2D
-
-    init(title: String?,
-         subtitle: String?,
-         coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.subtitle = subtitle
-        self.coordinate = coordinate
+    
+    init(model: Model) {
+        self.title = model.title
+        self.coordinate = model.coordinator
     }
     
-    static func requestMockData()-> [LandmarkModel]{
-        return [
-            LandmarkModel(title: "Bengalore",
-                               subtitle:"Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state.",
-                               coordinate: .init(latitude: 13.679720, longitude: 100.629900)),
-//            13.679720,100.629900
-            LandmarkModel(title: "Mumbai",
-                               subtitle:"Mumbai (formerly called Bombay) is a densely populated city on India’s west coast",
-                               coordinate: .init(latitude: 19.0760, longitude: 100.629900))
-        ]
-    }
+//    let title: String?
+//    let subtitle: String?
+//    let coordinate: CLLocationCoordinate2D
+//
+//    init(title: String?,
+//         subtitle: String?,
+//         coordinate: CLLocationCoordinate2D) {
+//        self.title = title
+//        self.subtitle = subtitle
+//        self.coordinate = coordinate
+//    }
+//
+//    static func requestMockData()-> [LandmarkModel]{
+//        return [
+//            LandmarkModel(title: "Bengalore",
+//                               subtitle:"Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state.",
+//                               coordinate: .init(latitude: 13.679720, longitude: 100.629900)),
+////            13.679720,100.629900
+//            LandmarkModel(title: "Mumbai",
+//                               subtitle:"Mumbai (formerly called Bombay) is a densely populated city on India’s west coast",
+//                               coordinate: .init(latitude: 19.0760, longitude: 100.629900))
+//        ]
+//    }
 }
