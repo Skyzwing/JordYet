@@ -10,11 +10,17 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        updateAnnotion(from: uiView)
+    }
     
-    let landmarks = LandmarkModel.requestMockData()
+    
+//    let landmarks = LandmarkModel.requestMockData()
+    let landmarks: [Model]
+    @Binding var showingAlert: Bool
     
     func makeCoordinator() -> MapViewCoordinator {
-        MapViewCoordinator(self)
+        MapViewCoordinator(mapView: self, showingAlert: self.$showingAlert)
     }
     
     /**
@@ -28,10 +34,16 @@ struct MapView: UIViewRepresentable {
         
     }
     
-    func updateUIView(_ view: MKMapView, context: Context){
-        //If you changing the Map Annotation then you have to remove old Annotations
-        //mapView.removeAnnotations(mapView.annotations)
-        view.delegate = context.coordinator
-        view.addAnnotations(landmarks)
+//    func updateUIView(_ view: MKMapView, context: Context){
+//        //If you changing the Map Annotation then you have to remove old Annotations
+//        //mapView.removeAnnotations(mapView.annotations)
+//        view.delegate = context.coordinator
+//        view.addAnnotations(landmarks)
+//    }
+    func updateAnnotion(from mapView: MKMapView) {
+        mapView.removeAnnotations(mapView.annotations)
+        let annotions = self.landmarks.map(LandmarkAnnotion.init)
+        mapView.addAnnotations(annotions)
     }
+    
 }

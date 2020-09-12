@@ -29,6 +29,11 @@
 		BD8EED44250D2EAF00F7A736 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EED43250D2EAF00F7A736 /* Home.swift */; };
 		BD8EED46250D2EB500F7A736 /* MyParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EED45250D2EB500F7A736 /* MyParking.swift */; };
 		BD8EED48250D2EBA00F7A736 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EED47250D2EBA00F7A736 /* Setting.swift */; };
+		BD8EEDA4250D395200F7A736 /* selectedTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA3250D395200F7A736 /* selectedTimeModal.swift */; };
+		BD8EEDA6250D3CE500F7A736 /* MyDatePick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */; };
+		BD8EEDA8250D4EC900F7A736 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA7250D4EC900F7A736 /* Modal.swift */; };
+		BD8EEDAA250D59B400F7A736 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */; };
+		BD8EEDAC250D64B000F7A736 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDAB250D64B000F7A736 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		BD8EED43250D2EAF00F7A736 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BD8EED45250D2EB500F7A736 /* MyParking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyParking.swift; sourceTree = "<group>"; };
 		BD8EED47250D2EBA00F7A736 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		BD8EEDA3250D395200F7A736 /* selectedTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedTimeModal.swift; sourceTree = "<group>"; };
+		BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDatePick.swift; sourceTree = "<group>"; };
+		BD8EEDA7250D4EC900F7A736 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
+		BD8EEDAB250D64B000F7A736 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +238,11 @@
 				BD0E81CF250C94F2008F7441 /* MapViewRepresent.swift */,
 				BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */,
 				BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */,
+				BD8EEDAB250D64B000F7A736 /* ModalView.swift */,
 				BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */,
 				BD7112B3250CADE0006A6AB9 /* LocationManager.swift */,
+				BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */,
+				BD8EEDA7250D4EC900F7A736 /* Modal.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -238,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				BD7112C1250CCBF5006A6AB9 /* Tabbar.swift */,
+				BD8EEDA3250D395200F7A736 /* selectedTimeModal.swift */,
+				BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -406,11 +421,16 @@
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
 				BD8EED48250D2EBA00F7A736 /* Setting.swift in Sources */,
 				88EAB5C5250C98F6008CDE87 /* LoginView.swift in Sources */,
+				BD8EEDA8250D4EC900F7A736 /* Modal.swift in Sources */,
+				BD8EEDAA250D59B400F7A736 /* MapDetailView.swift in Sources */,
+				BD8EEDA4250D395200F7A736 /* selectedTimeModal.swift in Sources */,
 				BD8EED44250D2EAF00F7A736 /* Home.swift in Sources */,
 				88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */,
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
+				BD8EEDAC250D64B000F7A736 /* ModalView.swift in Sources */,
 				BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */,
+				BD8EEDA6250D3CE500F7A736 /* MyDatePick.swift in Sources */,
 				BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */,
 				BD8EED46250D2EB500F7A736 /* MyParking.swift in Sources */,
 				BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */,

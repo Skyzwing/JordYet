@@ -10,7 +10,8 @@ import SwiftUI
 
 struct TabbarView: View {
     
-    @State var selected = 0
+    
+    @Binding var selected: Int
     
     var body: some View {
         HStack {
@@ -45,19 +46,12 @@ struct TabbarView: View {
                 }.foregroundColor(self.selected == 2 ? .red : .black)
             }
         }.padding([.leading, .trailing], 20)
-        .padding(.vertical, 20).background(Color.white)
+        .padding(.vertical, 20)
         
         .overlay(
-            RoundedCornered(radius: 30.0, corners: [.topRight, .topLeft])
-            .stroke(Color.white)
-            .shadow(color: .secondary, radius: 5, x: 0, y: -4)
-        )
-    }
-}
-
-struct Tabbar_Previews: PreviewProvider {
-    static var previews: some View {
-        TabbarView()
+           RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft])
+                .stroke(Color.white)
+            ).background(RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft]).fill(Color.white))
     }
 }
 
