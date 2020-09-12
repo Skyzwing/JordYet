@@ -16,13 +16,23 @@ struct AppView: View {
         
         ZStack(alignment: .bottom) {
             GeometryReader { geometry in
-                VStack {
-                    Text("Skyzsing")
-
+                Group {
+                    VStack {
+                        if self.selected == 0 {
+                            Text("S")
+//                            HomeView()
+                        } else if self.selected == 1 {
+                            Text("SSS")
+//                            MyParkingView()
+                        } else {
+                            Text("SSSSSS")
+//                            SettingView()
+                        }
+                    }
                 }
-            }
-            Tabbar()
             }.background(Image("bgWhite").edgesIgnoringSafeArea(.all))
+            Tabbar()
+        }
     }
 }
 
