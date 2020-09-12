@@ -20,6 +20,11 @@
 		BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */; };
 		BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B3250CADE0006A6AB9 /* LocationManager.swift */; };
 		BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */; };
+		BD7112B8250CBFBA006A6AB9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B7250CBFBA006A6AB9 /* Home.swift */; };
+		BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B9250CC29F006A6AB9 /* AppView.swift */; };
+		BD7112BC250CC2CF006A6AB9 /* MyParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112BB250CC2CF006A6AB9 /* MyParking.swift */; };
+		BD7112BE250CC2E7006A6AB9 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112BD250CC2E7006A6AB9 /* Setting.swift */; };
+		BD7112C2250CCBF5006A6AB9 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112C1250CCBF5006A6AB9 /* Tabbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkMode.swift; sourceTree = "<group>"; };
 		BD7112B3250CADE0006A6AB9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapShowView.swift; sourceTree = "<group>"; };
+		BD7112B7250CBFBA006A6AB9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		BD7112B9250CC29F006A6AB9 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		BD7112BB250CC2CF006A6AB9 /* MyParking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParking.swift; sourceTree = "<group>"; };
+		BD7112BD250CC2E7006A6AB9 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		BD7112C1250CCBF5006A6AB9 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +122,16 @@
 				BD0E819F250C928D008F7441 /* AppDelegate.swift */,
 				BD0E81A1250C928D008F7441 /* SceneDelegate.swift */,
 				BD0E81A3250C928D008F7441 /* ContentView.swift */,
+				BD7112B7250CBFBA006A6AB9 /* Home.swift */,
+				BD7112BB250CC2CF006A6AB9 /* MyParking.swift */,
+				BD7112BD250CC2E7006A6AB9 /* Setting.swift */,
 				BD0E81D5250C9610008F7441 /* Map */,
 				BD0E81A5250C928D008F7441 /* Assets.xcassets */,
 				BD0E81AA250C928E008F7441 /* LaunchScreen.storyboard */,
 				BD0E81AD250C928E008F7441 /* Info.plist */,
 				BD0E81A7250C928D008F7441 /* Preview Content */,
+				BD7112C3250CD6C6006A6AB9 /* Support */,
+				BD7112B9250CC29F006A6AB9 /* AppView.swift */,
 			);
 			path = JordYet;
 			sourceTree = "<group>";
@@ -157,6 +172,14 @@
 				BD7112B3250CADE0006A6AB9 /* LocationManager.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		BD7112C3250CD6C6006A6AB9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BD7112C1250CCBF5006A6AB9 /* Tabbar.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +315,17 @@
 			files = (
 				BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */,
 				BD0E81D0250C94F2008F7441 /* MapViewRepresent.swift in Sources */,
+				BD7112BE250CC2E7006A6AB9 /* Setting.swift in Sources */,
 				BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */,
+				BD7112C2250CCBF5006A6AB9 /* Tabbar.swift in Sources */,
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
+				BD7112B8250CBFBA006A6AB9 /* Home.swift in Sources */,
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
 				BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */,
+				BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */,
 				BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */,
+				BD7112BC250CC2CF006A6AB9 /* MyParking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
