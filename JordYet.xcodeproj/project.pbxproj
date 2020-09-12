@@ -26,6 +26,7 @@
 		8844D6AA250D3D4400B27F19 /* Kanit-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8844D697250D3D4400B27F19 /* Kanit-ExtraLightItalic.ttf */; };
 		8844D6AB250D3D4400B27F19 /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8844D698250D3D4400B27F19 /* Kanit-Medium.ttf */; };
 		8844D6AE250D425E00B27F19 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6AD250D425E00B27F19 /* RegisterView.swift */; };
+		8844D6B0250D572C00B27F19 /* RealLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6AF250D572C00B27F19 /* RealLoginView.swift */; };
 		88EAB5C5250C98F6008CDE87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C4250C98F6008CDE87 /* LoginView.swift */; };
 		88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */; };
 		BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E819F250C928D008F7441 /* AppDelegate.swift */; };
@@ -85,6 +86,7 @@
 		8844D697250D3D4400B27F19 /* Kanit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		8844D698250D3D4400B27F19 /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
 		8844D6AD250D425E00B27F19 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		8844D6AF250D572C00B27F19 /* RealLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealLoginView.swift; sourceTree = "<group>"; };
 		88EAB5C4250C98F6008CDE87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModal.swift; sourceTree = "<group>"; };
 		BD0E819C250C928D008F7441 /* JordYet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordYet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 			children = (
 				88EAB5C4250C98F6008CDE87 /* LoginView.swift */,
 				88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */,
+				8844D6AF250D572C00B27F19 /* RealLoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */,
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
+				8844D6B0250D572C00B27F19 /* RealLoginView.swift in Sources */,
 				BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */,
 				BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */,
 				8844D6AE250D425E00B27F19 /* RegisterView.swift in Sources */,
