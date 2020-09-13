@@ -207,13 +207,13 @@ struct GridViewHeader: View {
     var body: some View {
         HStack {
             Spacer()
-            Text("Tweets")
+            Text("HOURLY")
                 .overlay(MoveUnderlineButton(offset: $offset, width: $width))
             Spacer()
-            Text("Tweets & Replies")
+            Text("DAILY")
                 .overlay(MoveUnderlineButton(offset: $offset, width: $width))
             Spacer()
-            Text("Media")
+            Text("MONTHS")
                 .overlay(MoveUnderlineButton(offset: $offset, width: $width))
             Spacer()
         }

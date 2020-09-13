@@ -68,7 +68,7 @@ struct MapShowView: View {
                         
                     }
                     HStack {
-                        TextField("12:00", text: self.$address, onEditingChanged:  { _ in }) {
+                        TextField("12:00", text: self.$start, onEditingChanged:  { _ in }) {
                             self.getNearlyByLandmark()
                         }
                         .font(kanitRegular)
@@ -77,7 +77,7 @@ struct MapShowView: View {
                         .background(Color.white)
                         .cornerRadius(12)
                         .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.trailing, 8)
-                        TextField("14:00", text: self.$address, onEditingChanged:  { _ in }) {
+                        TextField("14:00", text: self.$end, onEditingChanged:  { _ in }) {
                             self.getNearlyByLandmark()
                         }
                         .font(kanitRegular)

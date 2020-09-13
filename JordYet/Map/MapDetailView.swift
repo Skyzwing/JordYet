@@ -32,9 +32,9 @@ struct MapDetailView: View {
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                         }.padding(.bottom, -8)
-                        Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
-                        Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
-                        Text("Creative Me").font(.custom("Kanit-Bold", size: 20)).padding(.bottom, 24)
+                        Text("30 Baht/Hourly.").font(.custom("Kanit-Bold", size: 20))
+                        Text("300 Baht/Day").font(.custom("Kanit-Bold", size: 20))
+                        Text("3,000 Baht/Months").font(.custom("Kanit-Bold", size: 20)).padding(.bottom, 24)
                         Button(action: {
                             self.viewControllerHolder?.present(style: .fullScreen) {
                                 ParkingFullDetail()
