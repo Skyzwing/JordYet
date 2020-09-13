@@ -78,7 +78,7 @@ struct HomeView: View {
                         Text("Or").padding(.bottom, 24)
                         Button(action: {
                             self.viewControllerHolder?.present(style: .fullScreen) {
-                                MapShowView(address: self.$address)
+                                MapShowView(address: self.address)
                             }
                         }) {
                             Text("SELECT A DESTINATION").foregroundColor(.red)

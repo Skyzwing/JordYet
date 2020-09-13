@@ -11,6 +11,8 @@ import SwiftUI
 struct AppView: View {
     
     @State var selected = 0
+    @EnvironmentObject var settings: ModelMap
+
     
     var body: some View {
         
@@ -21,7 +23,7 @@ struct AppView: View {
                         if self.selected == 0 {
                             HomeView()
                         } else if self.selected == 1 {
-                            MyParkingView()
+                            MyParkingView1()
                         } else {
                             SettingView()
                         }
