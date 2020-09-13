@@ -15,30 +15,6 @@ struct TabbarParkDetail: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("12:00")
-                    .font(kanitBold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(Color.white)
-                    .frame(width: 156, height: 48)
-                    .cornerRadius(12)
-                    .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.trailing, 4)
-                Text("14:00")
-                    .font(kanitBold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(Color.white)
-                    .frame(width: 156, height: 48)
-                    .cornerRadius(12)
-                    .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.leading, 4)
-            }.padding(.bottom, 16)
-            HStack {
-                Text("30 Baht/Hourly.").font(kanitBold).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .frame(width: 327, height: 48)
-                    .background(Color.white)
-                    .cornerRadius(12)
-                    .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4)
-            }.padding(.bottom, 40)
             VStack(alignment: .leading) {
                 Text("10:00 - 12:00").padding(.bottom, 8).font(.custom("Kanit-Medium", size: 14)).foregroundColor(Color(red: 16/255, green: 16/255, blue: 16/255))
                 Text("30 Baht/Hourly.").padding(.bottom, 24).font(.custom("Kanit-Bold", size: 20))
