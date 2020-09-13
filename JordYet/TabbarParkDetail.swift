@@ -44,7 +44,7 @@ struct TabbarParkDetail: View {
                 Text("30 Baht/Hourly.").padding(.bottom, 24).font(.custom("Kanit-Bold", size: 20))
                 Button(action: {
                     self.viewControllerHolder?.present(style: .fullScreen) {
-                        AppView()
+                        CreditCardView()
                     }
                 }) {
                     Text("BOOKING")

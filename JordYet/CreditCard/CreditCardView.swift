@@ -13,6 +13,7 @@ struct CreditCardView_Previews: PreviewProvider {
 }
 
 struct CreditCardView: View {
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     
     @State var promo = ""
     
@@ -23,7 +24,11 @@ struct CreditCardView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    Button(action: {print("Button Tapped")}) {
+                    Button(action: {
+                        self.viewControllerHolder?.present(style: .fullScreen) {
+                            AppView()
+                        }
+                    }) {
                         BackButton()
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -140,7 +145,13 @@ struct CreditCardView: View {
                 }
                 
                 Spacer().frame(height: 110)
-                PayButton()
+                Button(action: {
+                    self.viewControllerHolder?.present(style: .fullScreen) {
+                        AppView()
+                    }
+                }) {
+                    PayButton()
+                }
             }
         }
     }
