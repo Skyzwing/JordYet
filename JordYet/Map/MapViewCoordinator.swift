@@ -1,6 +1,7 @@
 import Foundation
 import MapKit
 import SwiftUI
+import CoreLocation
 
 /*
  Coordinator for using UIKit inside SwiftUI.
@@ -10,6 +11,7 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
     var mapViewController: MapView
     @Binding var showAlert: Bool
     @Binding var callOut: Bool
+    @EnvironmentObject var settings: ModelMap
     
     init(_ control: MapView, showingAlert: Binding<Bool>, callOut: Binding<Bool>) {
         self.mapViewController = control
@@ -68,10 +70,15 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        var locationManager = CLLocationManager()
+        var currentLoc: CLLocation!
         var selectedAnnotation = view.isSelected
+        var annotation = view.annotation
         if selectedAnnotation == true {
             print("yes")
             callOut = true
+            settings.lat = annotation?.coordinate.latitude ?? 0.00
+            settings.long = annotation?.coordinate.longitude ?? 0.00
         }
     }
 }

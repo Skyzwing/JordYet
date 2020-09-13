@@ -33,6 +33,9 @@
 		BD054A4A250DC3DC0020709A /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */; };
 		BD054A4C250DCBBC0020709A /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A4B250DCBBC0020709A /* UIViewControllerHelper.swift */; };
 		BD054A4E250DCBEA0020709A /* UIViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A4D250DCBEA0020709A /* UIViewController+Present.swift */; };
+		BD054A50250DE0030020709A /* ModalMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A4F250DE0030020709A /* ModalMap.swift */; };
+		BD054A5A250DEA700020709A /* MyParkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A59250DEA700020709A /* MyParkingView.swift */; };
+		BD054A5C250DEA9D0020709A /* MyParkingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A5B250DEA9D0020709A /* MyParkingMapView.swift */; };
 		BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E819F250C928D008F7441 /* AppDelegate.swift */; };
 		BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81A1250C928D008F7441 /* SceneDelegate.swift */; };
 		BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81A3250C928D008F7441 /* ContentView.swift */; };
@@ -105,6 +108,9 @@
 		BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		BD054A4B250DCBBC0020709A /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		BD054A4D250DCBEA0020709A /* UIViewController+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Present.swift"; sourceTree = "<group>"; };
+		BD054A4F250DE0030020709A /* ModalMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalMap.swift; sourceTree = "<group>"; };
+		BD054A59250DEA700020709A /* MyParkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParkingView.swift; sourceTree = "<group>"; };
+		BD054A5B250DEA9D0020709A /* MyParkingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParkingMapView.swift; sourceTree = "<group>"; };
 		BD0E819C250C928D008F7441 /* JordYet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordYet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E819F250C928D008F7441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0E81A1250C928D008F7441 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +312,7 @@
 				BD7112B3250CADE0006A6AB9 /* LocationManager.swift */,
 				BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */,
 				BD8EEDA7250D4EC900F7A736 /* Modal.swift */,
+				BD054A4F250DE0030020709A /* ModalMap.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -328,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				BD8EED45250D2EB500F7A736 /* MyParking.swift */,
+				BD054A5B250DEA9D0020709A /* MyParkingMapView.swift */,
+				BD054A59250DEA700020709A /* MyParkingView.swift */,
 			);
 			path = MyParking;
 			sourceTree = "<group>";
@@ -497,17 +506,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD054A50250DE0030020709A /* ModalMap.swift in Sources */,
 				BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */,
 				BD8EEDB4250D928E00F7A736 /* TabbarParkDetail.swift in Sources */,
 				BD0E81D0250C94F2008F7441 /* MapViewRepresent.swift in Sources */,
 				BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */,
 				BD7112C2250CCBF5006A6AB9 /* Tabbar.swift in Sources */,
-
 				BD054A4C250DCBBC0020709A /* UIViewControllerHelper.swift in Sources */,
 				BD054A4E250DCBEA0020709A /* UIViewController+Present.swift in Sources */,
-
 				8844D6B3250DC3AA00B27F19 /* CreditCardView.swift in Sources */,
-
 				BD8EEDB2250D7D7400F7A736 /* ParkingFullDetail.swift in Sources */,
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
 				BD8EED48250D2EBA00F7A736 /* Setting.swift in Sources */,
@@ -520,12 +527,14 @@
 				88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */,
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
+				BD054A5A250DEA700020709A /* MyParkingView.swift in Sources */,
 				8844D6B0250D572C00B27F19 /* RealLoginView.swift in Sources */,
 				BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */,
 				BD8EEDA6250D3CE500F7A736 /* MyDatePick.swift in Sources */,
 				BD8EEDB0250D6D0F00F7A736 /* UIViewController+SwiftUI.swift in Sources */,
 				BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */,
 				8844D6AE250D425E00B27F19 /* RegisterView.swift in Sources */,
+				BD054A5C250DEA9D0020709A /* MyParkingMapView.swift in Sources */,
 				BD8EED46250D2EB500F7A736 /* MyParking.swift in Sources */,
 				BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */,
 				BD5DE73D250DA546006700FD /* ModalView.swift in Sources */,
