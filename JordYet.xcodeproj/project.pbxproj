@@ -27,6 +27,7 @@
 		8844D6AB250D3D4400B27F19 /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8844D698250D3D4400B27F19 /* Kanit-Medium.ttf */; };
 		8844D6AE250D425E00B27F19 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6AD250D425E00B27F19 /* RegisterView.swift */; };
 		8844D6B0250D572C00B27F19 /* RealLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6AF250D572C00B27F19 /* RealLoginView.swift */; };
+		8844D6B3250DC3AA00B27F19 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6B2250DC3AA00B27F19 /* CreditCardView.swift */; };
 		88EAB5C5250C98F6008CDE87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C4250C98F6008CDE87 /* LoginView.swift */; };
 		88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */; };
 		BD054A4A250DC3DC0020709A /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */; };
@@ -98,6 +99,7 @@
 		8844D698250D3D4400B27F19 /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
 		8844D6AD250D425E00B27F19 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		8844D6AF250D572C00B27F19 /* RealLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealLoginView.swift; sourceTree = "<group>"; };
+		8844D6B2250DC3AA00B27F19 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		88EAB5C4250C98F6008CDE87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModal.swift; sourceTree = "<group>"; };
 		BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		8844D6B1250DC37D00B27F19 /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				8844D6B2250DC3AA00B27F19 /* CreditCardView.swift */,
+			);
+			path = CreditCard;
+			sourceTree = "<group>";
+		};
 		88EAB5CA250D229C008CDE87 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		BD0E819E250C928D008F7441 /* JordYet */ = {
 			isa = PBXGroup;
 			children = (
+				8844D6B1250DC37D00B27F19 /* CreditCard */,
 				8844D6AC250D424100B27F19 /* Register */,
 				BD8EEDB1250D7D7400F7A736 /* ParkingFullDetail.swift */,
 				BD8EEDB3250D928E00F7A736 /* TabbarParkDetail.swift */,
@@ -491,8 +502,12 @@
 				BD0E81D0250C94F2008F7441 /* MapViewRepresent.swift in Sources */,
 				BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */,
 				BD7112C2250CCBF5006A6AB9 /* Tabbar.swift in Sources */,
+
 				BD054A4C250DCBBC0020709A /* UIViewControllerHelper.swift in Sources */,
 				BD054A4E250DCBEA0020709A /* UIViewController+Present.swift in Sources */,
+
+				8844D6B3250DC3AA00B27F19 /* CreditCardView.swift in Sources */,
+
 				BD8EEDB2250D7D7400F7A736 /* ParkingFullDetail.swift in Sources */,
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
 				BD8EED48250D2EBA00F7A736 /* Setting.swift in Sources */,
