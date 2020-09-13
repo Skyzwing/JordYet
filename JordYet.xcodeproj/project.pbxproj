@@ -30,6 +30,9 @@
 		8844D6B3250DC3AA00B27F19 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D6B2250DC3AA00B27F19 /* CreditCardView.swift */; };
 		88EAB5C5250C98F6008CDE87 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C4250C98F6008CDE87 /* LoginView.swift */; };
 		88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */; };
+		BD054A4A250DC3DC0020709A /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */; };
+		BD054A4C250DCBBC0020709A /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A4B250DCBBC0020709A /* UIViewControllerHelper.swift */; };
+		BD054A4E250DCBEA0020709A /* UIViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD054A4D250DCBEA0020709A /* UIViewController+Present.swift */; };
 		BD0E81A0250C928D008F7441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E819F250C928D008F7441 /* AppDelegate.swift */; };
 		BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81A1250C928D008F7441 /* SceneDelegate.swift */; };
 		BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81A3250C928D008F7441 /* ContentView.swift */; };
@@ -99,6 +102,9 @@
 		8844D6B2250DC3AA00B27F19 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		88EAB5C4250C98F6008CDE87 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88EAB5C6250CD2F8008CDE87 /* BottomSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModal.swift; sourceTree = "<group>"; };
+		BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		BD054A4B250DCBBC0020709A /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
+		BD054A4D250DCBEA0020709A /* UIViewController+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Present.swift"; sourceTree = "<group>"; };
 		BD0E819C250C928D008F7441 /* JordYet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordYet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E819F250C928D008F7441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0E81A1250C928D008F7441 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,8 +315,11 @@
 			children = (
 				BD7112C1250CCBF5006A6AB9 /* Tabbar.swift */,
 				BD8EEDAF250D6D0F00F7A736 /* UIViewController+SwiftUI.swift */,
+				BD054A4B250DCBBC0020709A /* UIViewControllerHelper.swift */,
+				BD054A4D250DCBEA0020709A /* UIViewController+Present.swift */,
 				BD8EEDA3250D395200F7A736 /* selectedTimeModal.swift */,
 				BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */,
+				BD054A49250DC3DC0020709A /* NavigationBarModifier.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -493,7 +502,12 @@
 				BD0E81D0250C94F2008F7441 /* MapViewRepresent.swift in Sources */,
 				BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */,
 				BD7112C2250CCBF5006A6AB9 /* Tabbar.swift in Sources */,
+
+				BD054A4C250DCBBC0020709A /* UIViewControllerHelper.swift in Sources */,
+				BD054A4E250DCBEA0020709A /* UIViewController+Present.swift in Sources */,
+
 				8844D6B3250DC3AA00B27F19 /* CreditCardView.swift in Sources */,
+
 				BD8EEDB2250D7D7400F7A736 /* ParkingFullDetail.swift in Sources */,
 				BD0E81A2250C928D008F7441 /* SceneDelegate.swift in Sources */,
 				BD8EED48250D2EBA00F7A736 /* Setting.swift in Sources */,
@@ -501,6 +515,7 @@
 				BD8EEDA8250D4EC900F7A736 /* Modal.swift in Sources */,
 				BD8EEDAA250D59B400F7A736 /* MapDetailView.swift in Sources */,
 				BD8EEDA4250D395200F7A736 /* selectedTimeModal.swift in Sources */,
+				BD054A4A250DC3DC0020709A /* NavigationBarModifier.swift in Sources */,
 				BD8EED44250D2EAF00F7A736 /* Home.swift in Sources */,
 				88EAB5C7250CD2F8008CDE87 /* BottomSheetModal.swift in Sources */,
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,

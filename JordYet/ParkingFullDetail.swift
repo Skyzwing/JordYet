@@ -13,10 +13,8 @@ let grayColor = Color(red: 216/255, green: 216/255, blue: 216/255)
 
 struct ParkingFullDetail: View {
     
-    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
-    private var viewController: UIViewController? {
-        self.viewControllerHolder.value
-    }
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+
     
     
     var body: some View {

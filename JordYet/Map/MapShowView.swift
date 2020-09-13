@@ -10,12 +10,18 @@ import SwiftUI
 import MapKit
 
 struct MapShowView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject private var locationManager = LocationManager()
-    @State var address = ""
+//    @State var address = ""
+    @State var start = ""
+    @State var end = ""
     
     @State var landmark = [Model]()
     @State var showingAlert: Bool = false
     @State var callOut: Bool = false
+    @Binding var address: String
+    
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     
     private func getNearlyByLandmark() {
         guard let location = self.locationManager.location else { return }
@@ -43,11 +49,13 @@ struct MapShowView: View {
             VStack {
                 VStack {
                     HStack {
-                        Button(action: {print("Button Tapped")}) {
+                        Button(action: {
+                            self.viewControllerHolder?.dismiss(animated: true, completion: nil)
+                            
+                        }) {
                             BackButton()
                         }
                         .buttonStyle(PlainButtonStyle()).padding(.trailing, 4)
-                        
                         TextField("Enter Address Or Place", text: self.$address, onEditingChanged:  { _ in }) {
                             self.getNearlyByLandmark()
                         }
@@ -86,7 +94,10 @@ struct MapShowView: View {
                 }
                 
             }
-        }}
+            
+        }
+    }
+    
 }
 
 //struct MapShowView_Previews: PreviewProvider {
