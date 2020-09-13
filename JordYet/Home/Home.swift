@@ -18,10 +18,8 @@ struct HomeView: View {
     @State var checkIn = "Check-In"
     @State var checkOut = "Check-Out"
     @State var selectedTime = false
-    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
-    private var viewController: UIViewController? {
-        self.viewControllerHolder.value
-    }
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+
     
     
     var body: some View {
@@ -48,12 +46,15 @@ struct HomeView: View {
                             }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.trailing, 12)
                             
                             Button(action: {
-                                print("A")
+                                self.selectedTime = true
                             }) {
                                 Spacer()
                                 Text("\(self.checkOut)").padding().foregroundColor(.gray).cornerRadius(10).font(.custom("Kanit-Bold", size: 16))
                                 Spacer()
-                            }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
+                                }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
+                            if self.selectedTime == true {
+                                selectedTimeModal()
+                            }
                             
     //                        TextField("Check-In", text: self.$address).padding()
     //                        .background(Color.white)
@@ -76,8 +77,8 @@ struct HomeView: View {
                         }.padding(.bottom, 24)
                         Text("Or").padding(.bottom, 24)
                         Button(action: {
-                            self.viewController?.present(style: .fullScreen) {
-                                MapShowView()
+                            self.viewControllerHolder?.present(style: .fullScreen) {
+                                MapShowView(address: self.$address)
                             }
                         }) {
                             Text("SELECT A DESTINATION").foregroundColor(.red)

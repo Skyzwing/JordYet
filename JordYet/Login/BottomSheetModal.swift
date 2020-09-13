@@ -11,15 +11,12 @@ struct Tabbar: View {
     
     @State var isShow = false
     @State private var showModal = false
-    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
-    private var viewController: UIViewController? {
-        self.viewControllerHolder.value
-    }
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
 
     var body: some View {
         VStack {
             Button(action: {
-                self.viewController?.present(style: .fullScreen) {
+                self.viewControllerHolder?.present(style: .fullScreen) {
 //                self.isShow.toggle()
                     RealLoginView()
                 }

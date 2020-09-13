@@ -13,6 +13,7 @@ struct selectedTimeModal: View {
     
     @State var wakeUp: Date = Date()
     @State var minterval: Int = 1
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     
     let timeFormat: DateFormatter = {
       let formatter = DateFormatter()
@@ -21,16 +22,24 @@ struct selectedTimeModal: View {
     }()
     
     var body: some View {
-        VStack {
-            MyDatePicker(selection: $wakeUp, minuteInterval: minterval, displayedComponents: .hourAndMinute)
-            Text("\(wakeUp, formatter: self.timeFormat)")
-        }.padding([.leading, .trailing], 20)
-        .padding(.vertical, 20)
-        
-        .overlay(
-           RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft])
-                .stroke(Color.white)
-            ).background(RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft]).fill(Color.white))
+            VStack {
+                HStack{
+                    Button(action: {
+                        self.viewControllerHolder?.dismiss(animated: true, completion: nil)
+                    }) {
+                        Text("Close")
+                    }
+                    Spacer()
+                }
+                MyDatePicker(selection: $wakeUp, minuteInterval: minterval, displayedComponents: .hourAndMinute)
+                Text("\(wakeUp, formatter: self.timeFormat)")
+            }.padding([.leading, .trailing], 20)
+            .padding(.vertical, 20)
+            
+            .overlay(
+               RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft])
+                    .stroke(Color.white)
+                ).background(RoundedCorner(radius: 20.0, corners: [.topRight, .topLeft]).fill(Color.white))
     }
 }
 

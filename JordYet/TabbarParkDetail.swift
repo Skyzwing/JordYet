@@ -10,10 +10,8 @@ import SwiftUI
 
 struct TabbarParkDetail: View {
     
-    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
-    private var viewController: UIViewController? {
-        self.viewControllerHolder.value
-    }
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
+
     
     var body: some View {
         VStack {
@@ -45,7 +43,7 @@ struct TabbarParkDetail: View {
                 Text("10:00 - 12:00").padding(.bottom, 8).font(.custom("Kanit-Medium", size: 14)).foregroundColor(Color(red: 16/255, green: 16/255, blue: 16/255))
                 Text("30 Baht/Hourly.").padding(.bottom, 24).font(.custom("Kanit-Bold", size: 20))
                 Button(action: {
-                    self.viewController?.present(style: .fullScreen) {
+                    self.viewControllerHolder?.present(style: .fullScreen) {
                         AppView()
                     }
                 }) {

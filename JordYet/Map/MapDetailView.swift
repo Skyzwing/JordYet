@@ -9,10 +9,7 @@
 import SwiftUI
 
 struct MapDetailView: View {
-    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
-    private var viewController: UIViewController? {
-        self.viewControllerHolder.value
-    }
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     
     var body: some View {
         ZStack {
@@ -39,7 +36,7 @@ struct MapDetailView: View {
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20)).padding(.bottom, 24)
                         Button(action: {
-                            self.viewController?.present(style: .fullScreen) {
+                            self.viewControllerHolder?.present(style: .fullScreen) {
                                 ParkingFullDetail()
                             }
                             
