@@ -12,6 +12,4 @@ import SwiftUI
 class ModelMap: ObservableObject {
     @Published var lat: Double = 0.00
     @Published var long: Double = 0.00
-    @Published var currentLat: Double = 0.00
-    @Published var currentlong: Double = 0.00
 }

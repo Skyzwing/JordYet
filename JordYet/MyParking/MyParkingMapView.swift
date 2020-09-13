@@ -24,8 +24,8 @@ struct MyParkingMapView: UIViewRepresentable {
         var locationManager = CLLocationManager()
         var currentLoc: CLLocation!
         currentLoc = locationManager.location
-//        settings.currentLat = currentLoc.coordinate.latitude
-//        settings.currentlong = currentLoc.coordinate.longitude
+        print(settings.lat)
+        print(settings.long)
         let sourceCoordinator = CLLocationCoordinate2D(latitude: currentLoc.coordinate.latitude, longitude: currentLoc.coordinate.longitude)
         let destinationCoordinator = CLLocationCoordinate2D(latitude: settings.lat, longitude: settings.long)
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.086, longitude: 80.2727), latitudinalMeters: 1000, longitudinalMeters: 1000)

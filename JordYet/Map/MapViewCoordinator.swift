@@ -77,8 +77,8 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate {
         if selectedAnnotation == true {
             print("yes")
             callOut = true
-            settings.lat = annotation?.coordinate.latitude ?? 0.00
-            settings.long = annotation?.coordinate.longitude ?? 0.00
+//            self.settings.lat = annotation?.coordinate.latitude ?? 0.00
+//            self.settings.long = annotation?.coordinate.longitude ?? 0.00
         }
     }
 }
