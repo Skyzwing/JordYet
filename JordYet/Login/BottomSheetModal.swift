@@ -8,11 +8,24 @@ let blackColor = Color(red: 16.0/255.0, green: 16.0/255.0, blue: 16.0/255.0)
 let pinkishGrey = Color(red: 173/255.0, green: 172/255.0, blue: 172/255.0)
 
 struct Tabbar: View {
+    
+    @State var isShow = false
+    @State private var showModal = false
+    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
+    private var viewController: UIViewController? {
+        self.viewControllerHolder.value
+    }
+
     var body: some View {
         VStack {
-            Button(action: {print("Button Tapped")}) {
+            Button(action: {
+                self.viewController?.present(style: .fullScreen) {
+//                self.isShow.toggle()
+                    RealLoginView()
+                }
+            }) {
                 LoginButton()
-            }
+                }
             .padding(.bottom, 16)
             HStack {
                 Button(action: {print("Button Tapped")}) {
