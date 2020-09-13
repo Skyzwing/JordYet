@@ -14,6 +14,10 @@ struct RealLoginView: View {
     
     @State var email = ""
     @State var password = ""
+    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
+    private var viewController: UIViewController? {
+        self.viewControllerHolder.value
+    }
     
     var body: some View {
         ZStack {
@@ -56,7 +60,12 @@ struct RealLoginView: View {
                     ForgotPasswordButton()
                 }.padding(.bottom, 116)
                 
-                Button(action: {print("Button Tapped")}) {
+                Button(action: {
+                    self.viewController?.present(style: .fullScreen) {
+                    //                self.isShow.toggle()
+                                        AppView()
+                    }
+                }) {
                     LoginButton()
                 }.padding(.bottom, 16)
                 

@@ -34,24 +34,63 @@ struct MapShowView: View {
         }
     }
     
-//    func calculateOffSet() -> CGFloat {
-//        sele
-//    }
+    //    func calculateOffSet() -> CGFloat {
+    //        sele
+    //    }
     
     var body: some View {
         ZStack(alignment: .top) {
             MapView(landmarks: landmark, showingAlert: $showingAlert).edgesIgnoringSafeArea(.all).modal(isPresented: $showingAlert) {
                 MapDetailView()
             }
-            TextField("Enter Address Or Place", text: self.$address, onEditingChanged:  { _ in }) {
-                self.getNearlyByLandmark()
-            }.textFieldStyle(RoundedBorderTextFieldStyle()).padding().offset(y: 44)
-        }
-    }
+            VStack {
+                VStack {
+                    HStack {
+                        Button(action: {print("Button Tapped")}) {
+                            BackButton()
+                        }
+                        .buttonStyle(PlainButtonStyle()).padding(.trailing, 4)
+                        
+                        TextField("Enter Address Or Place", text: self.$address, onEditingChanged:  { _ in }) {
+                            self.getNearlyByLandmark()
+                        }
+                        .font(kanitRegular)
+                        .foregroundColor(pinkishGrey)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.leading, 4)
+                        
+                    }
+                    HStack {
+                        TextField("12:00", text: self.$address, onEditingChanged:  { _ in }) {
+                            self.getNearlyByLandmark()
+                        }
+                        .font(kanitRegular)
+                        .foregroundColor(pinkishGrey)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.trailing, 8)
+                        TextField("14:00", text: self.$address, onEditingChanged:  { _ in }) {
+                            self.getNearlyByLandmark()
+                        }
+                        .font(kanitRegular)
+                        .foregroundColor(pinkishGrey)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(color: backButtonShadow, radius: 12, x: 0, y: 4).padding(.leading, 8)
+                    }
+                }.padding()
+                Spacer()
+                MapDetailView().cornerRadius(20)
+            }
+        }}
 }
 
 //struct MapShowView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        MapShowView()
+//        MapShowView(showingAlert: Binding<Bool>.constant(true))
 //    }
 //}

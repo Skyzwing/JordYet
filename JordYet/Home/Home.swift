@@ -18,6 +18,10 @@ struct HomeView: View {
     @State var checkIn = "Check-In"
     @State var checkOut = "Check-Out"
     @State var selectedTime = false
+    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
+    private var viewController: UIViewController? {
+        self.viewControllerHolder.value
+    }
     
     
     var body: some View {
@@ -50,6 +54,7 @@ struct HomeView: View {
                                 Text("\(self.checkOut)").padding().foregroundColor(.gray).cornerRadius(10).font(.custom("Kanit-Bold", size: 16))
                                 Spacer()
                             }.background(Color.white).shadow(color: self.blur, radius: 24, x: 0, y: 4).padding(.leading, 12)
+                            
     //                        TextField("Check-In", text: self.$address).padding()
     //                        .background(Color.white)
     //                        .cornerRadius(10.0)
@@ -71,7 +76,9 @@ struct HomeView: View {
                         }.padding(.bottom, 24)
                         Text("Or").padding(.bottom, 24)
                         Button(action: {
-                            print("A")
+                            self.viewController?.present(style: .fullScreen) {
+                                MapShowView(showingAlert: false)
+                            }
                         }) {
                             Text("SELECT A DESTINATION").foregroundColor(.red)
                             .padding()
