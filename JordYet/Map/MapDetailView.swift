@@ -22,6 +22,7 @@ struct MapDetailView: View {
                     VStack(alignment: .leading) {
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
                         Text("43 Ban Rawipha Sukhumvit Alley, Bang Chak, Phra Khanong, Bangkok 10260").foregroundColor(.init(red: 0, green: 0, blue: 0, opacity: 50)).font(.custom("Kanit-Medium", size: 14)).lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
                         HStack {
                             Image("icAddToCartCopy28").resizable().frame(width: 16, height: 16)
                             Text("8/10 Parking").font(.custom("Kanit-Medium", size: 14))
@@ -57,3 +58,9 @@ struct MapDetailView: View {
     }
 }
 
+
+struct MapDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        MapDetailView()
+    }
+}
