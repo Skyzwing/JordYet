@@ -24,7 +24,9 @@ struct RealLoginView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    Button(action: {print("Button Tapped")}) {
+                    Button(action: {
+                        self.viewControllerHolder?.dismiss(animated: true, completion: nil)
+                    }) {
                         BackButton()
                     }
                     .buttonStyle(PlainButtonStyle())
