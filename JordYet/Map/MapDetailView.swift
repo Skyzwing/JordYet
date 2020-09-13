@@ -23,17 +23,18 @@ struct MapDetailView: View {
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
                         Text("43 Ban Rawipha Sukhumvit Alley, Bang Chak, Phra Khanong, Bangkok 10260").foregroundColor(.init(red: 0, green: 0, blue: 0, opacity: 50)).font(.custom("Kanit-Medium", size: 14)).lineLimit(nil)
                             .fixedSize(horizontal: false, vertical: true)
+                            .padding(.bottom, -8)
                         HStack {
                             Image("icAddToCartCopy28").resizable().frame(width: 16, height: 16)
                             Text("8/10 Parking").font(.custom("Kanit-Medium", size: 14))
-                        }
+                        }.padding(.bottom, -8)
                         HStack {
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
                             Image("icAddToCartCopy23").resizable().frame(width: 16, height: 16)
-                        }
+                        }.padding(.bottom, -8)
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20))
                         Text("Creative Me").font(.custom("Kanit-Bold", size: 20)).padding(.bottom, 24)
@@ -52,8 +53,12 @@ struct MapDetailView: View {
                         }.background(redColor).cornerRadius(10.0)
                     }.padding()
                     Spacer()
-                }.padding(15).frame(width: 343, height: 336, alignment: .leading)
-            }.background(Color.white).edgesIgnoringSafeArea(.all)
+                }
+                .padding(15)
+                .frame(width: 343, height: 336, alignment: .leading)
+            }
+            .background(Color.white)
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
