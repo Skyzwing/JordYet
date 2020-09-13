@@ -14,7 +14,8 @@ struct MapShowView: View {
     @State var address = ""
     
     @State var landmark = [Model]()
-    @State var showingAlert: Bool
+    @State var showingAlert: Bool = false
+    @State var callOut: Bool = false
     
     private func getNearlyByLandmark() {
         guard let location = self.locationManager.location else { return }
@@ -34,13 +35,9 @@ struct MapShowView: View {
         }
     }
     
-    //    func calculateOffSet() -> CGFloat {
-    //        sele
-    //    }
-    
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(landmarks: landmark, showingAlert: $showingAlert).edgesIgnoringSafeArea(.all).modal(isPresented: $showingAlert) {
+            MapView(landmarks: landmark, showingAlert: $showingAlert, callOut: $callOut).edgesIgnoringSafeArea(.all).modal(isPresented: $showingAlert) {
                 MapDetailView()
             }
             VStack {
@@ -84,7 +81,10 @@ struct MapShowView: View {
                     }
                 }.padding()
                 Spacer()
-                MapDetailView().cornerRadius(20)
+                if self.callOut == true {
+                    MapDetailView().cornerRadius(20)
+                }
+                
             }
         }}
 }

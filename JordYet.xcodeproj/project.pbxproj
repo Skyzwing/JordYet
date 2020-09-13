@@ -40,6 +40,7 @@
 		BD0E81D0250C94F2008F7441 /* MapViewRepresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81CF250C94F2008F7441 /* MapViewRepresent.swift */; };
 		BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */; };
 		BD0E81D4250C95A0008F7441 /* LandmarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */; };
+		BD5DE73D250DA546006700FD /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DE73C250DA546006700FD /* ModalView.swift */; };
 		BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B3250CADE0006A6AB9 /* LocationManager.swift */; };
 		BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */; };
 		BD7112BA250CC29F006A6AB9 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7112B9250CC29F006A6AB9 /* AppView.swift */; };
@@ -51,7 +52,6 @@
 		BD8EEDA6250D3CE500F7A736 /* MyDatePick.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */; };
 		BD8EEDA8250D4EC900F7A736 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA7250D4EC900F7A736 /* Modal.swift */; };
 		BD8EEDAA250D59B400F7A736 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */; };
-		BD8EEDAC250D64B000F7A736 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDAB250D64B000F7A736 /* ModalView.swift */; };
 		BD8EEDB0250D6D0F00F7A736 /* UIViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDAF250D6D0F00F7A736 /* UIViewController+SwiftUI.swift */; };
 		BD8EEDB2250D7D7400F7A736 /* ParkingFullDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDB1250D7D7400F7A736 /* ParkingFullDetail.swift */; };
 		BD8EEDB4250D928E00F7A736 /* TabbarParkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8EEDB3250D928E00F7A736 /* TabbarParkDetail.swift */; };
@@ -114,6 +114,7 @@
 		BD0E81CF250C94F2008F7441 /* MapViewRepresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresent.swift; sourceTree = "<group>"; };
 		BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkMode.swift; sourceTree = "<group>"; };
+		BD5DE73C250DA546006700FD /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		BD7112B3250CADE0006A6AB9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapShowView.swift; sourceTree = "<group>"; };
 		BD7112B9250CC29F006A6AB9 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		BD8EEDA5250D3CE500F7A736 /* MyDatePick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDatePick.swift; sourceTree = "<group>"; };
 		BD8EEDA7250D4EC900F7A736 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
-		BD8EEDAB250D64B000F7A736 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		BD8EEDAF250D6D0F00F7A736 /* UIViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftUI.swift"; sourceTree = "<group>"; };
 		BD8EEDB1250D7D7400F7A736 /* ParkingFullDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFullDetail.swift; sourceTree = "<group>"; };
 		BD8EEDB3250D928E00F7A736 /* TabbarParkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarParkDetail.swift; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 			children = (
 				BD0E81CF250C94F2008F7441 /* MapViewRepresent.swift */,
 				BD7112B5250CAF4D006A6AB9 /* MapShowView.swift */,
+				BD5DE73C250DA546006700FD /* ModalView.swift */,
 				BD0E81D3250C95A0008F7441 /* LandmarkMode.swift */,
-				BD8EEDAB250D64B000F7A736 /* ModalView.swift */,
 				BD0E81D1250C9505008F7441 /* MapViewCoordinator.swift */,
 				BD7112B3250CADE0006A6AB9 /* LocationManager.swift */,
 				BD8EEDA9250D59B400F7A736 /* MapDetailView.swift */,
@@ -494,7 +494,6 @@
 				BD7112B4250CADE0006A6AB9 /* LocationManager.swift in Sources */,
 				BD0E81A4250C928D008F7441 /* ContentView.swift in Sources */,
 				8844D6B0250D572C00B27F19 /* RealLoginView.swift in Sources */,
-				BD8EEDAC250D64B000F7A736 /* ModalView.swift in Sources */,
 				BD7112B6250CAF4D006A6AB9 /* MapShowView.swift in Sources */,
 				BD8EEDA6250D3CE500F7A736 /* MyDatePick.swift in Sources */,
 				BD8EEDB0250D6D0F00F7A736 /* UIViewController+SwiftUI.swift in Sources */,
@@ -502,6 +501,7 @@
 				8844D6AE250D425E00B27F19 /* RegisterView.swift in Sources */,
 				BD8EED46250D2EB500F7A736 /* MyParking.swift in Sources */,
 				BD0E81D2250C9505008F7441 /* MapViewCoordinator.swift in Sources */,
+				BD5DE73D250DA546006700FD /* ModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

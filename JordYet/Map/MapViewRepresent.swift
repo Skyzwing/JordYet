@@ -18,9 +18,10 @@ struct MapView: UIViewRepresentable {
 //    let landmarks = LandmarkModel.requestMockData()
     let landmarks: [Model]
     @Binding var showingAlert: Bool
+    @Binding var callOut: Bool
     
     func makeCoordinator() -> MapViewCoordinator {
-        MapViewCoordinator(self, showingAlert: self.$showingAlert)
+        MapViewCoordinator(self, showingAlert: self.$showingAlert, callOut: self.$callOut)
     }
     
     /**
