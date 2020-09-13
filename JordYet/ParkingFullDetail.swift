@@ -40,7 +40,10 @@ struct ParkingFullDetail: View {
                         }.padding([.leading, .trailing], 24)
                         Group {
                             VStack {
-                                Image("neonbrandOrGJcWvi6JsUnsplash").cornerRadius(20).frame(width: 327, height: 216).padding(.bottom, 16)
+                                Image("2306e")
+                                        .frame(width: 327, height: 216)
+                                        .cornerRadius(20)
+                                        .padding(.bottom, 16)
                                 HStack {
                                     Ellipse()
                                         .fill(Color.red)
@@ -92,25 +95,13 @@ struct ParkingFullDetail: View {
                                     }
                                 }
                             }.padding(.bottom, 24)
-                            Button(action: {
-                                self.viewController?.present(style: .fullScreen) {
-                                    MyParkingView()
-                                }
-                                
-                            }) {
-                                Spacer()
-                                Text("BOOK HEAR")
-                                    .font(kanitBold)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                Spacer()
-                            }.background(redColor).cornerRadius(10.0)
                         }.padding(.leading, 24).padding(.trailing, 24)
                         
                     }
                 }
                 Spacer()
                 TabbarParkDetail()
+                Spacer().frame(height: -24)
             }
             
         }
